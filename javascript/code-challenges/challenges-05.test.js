@@ -147,12 +147,13 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  let newString=str.reduce((acc,item)=>{
-    acc=str.sort((a,b) =>b-a);
-    return acc;
-  },'')
+  const newArr= str.split('');
+  let arr =newArr.reduce((acc,cur)=>{
+    return cur + acc;
+
+  },'');
   // Solution code here...
-  return newString;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
