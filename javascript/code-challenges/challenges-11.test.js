@@ -87,17 +87,11 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-   let testarr;
-  input.forEach(item=>{
-    let arr=[];
-    item.forEach(value=>{
-      if(value%5==0 && value!==0){
-        arr.push(value);
-      }
-    });
-    testarr.push(arr);
-  }
-  )
+  let arr=input.map(item =>{
+    return item.filter(value=>value%5==0 && typeof value =='number' ).map(item =>Math.pow(2,item));
+  });
+  
+  return arr;
   // Solution code here...
 };
 
@@ -164,6 +158,15 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
+  let arr=data.filter(item =>item.gender =='female'|| item.gender =='male');
+  console.log(arr);
+  let names=[]
+  arr.forEach(item=>{
+    console.log(item.name);
+    names.push(item.name);
+  })
+  console.log(names);
+  return names.join(' and ')
   // Solution code here...
 };
 
@@ -174,7 +177,17 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  let charh=Number(data[0].height);
+  let charname='';
+console.log(charh);
+  data.forEach(item =>{
+    console.log(item.height);
+    if(charh>=Number(item.height)){
+      charh=item.height;
+      charname=item.name;
+    }
+  })
+  return charname;
 };
 
 /* ------------------------------------------------------------------------------------------------
