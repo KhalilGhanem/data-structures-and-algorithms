@@ -7,6 +7,7 @@
 |Challenge| Link|
 |-------|-------|
 |array-reverse|[CC1](array-reverse/README.md)|
-|array-reverse|[CC2](array-insert-shift/README.md)|
+|array-insert-shift|[CC2](array-insert-shift/README.md)|
+|array-binary-search|[CC3](array-binary-search/README.md)|
 
 
