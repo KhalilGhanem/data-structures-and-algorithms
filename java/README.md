@@ -9,5 +9,6 @@
 |array-reverse|[CC1](array-reverse/README.md)|
 |array-insert-shift|[CC2](array-insert-shift/README.md)|
 |array-binary-search|[CC3](array-binary-search/README.md)|
+|linked-list|[CC5](linked-list/README.md)|
 
 
