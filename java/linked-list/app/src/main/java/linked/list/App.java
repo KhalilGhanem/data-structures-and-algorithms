@@ -20,10 +20,10 @@ public class App {
       ll.append(20);
       ll.append(5);
       ll.append(7);
-      System.out.println(ll.to_string());
-      ll.insertBefore(7,11);
-      System.out.println(ll.to_string());
-      ll.insertAfter(7,80);
-      System.out.println(ll.to_string());
+//      System.out.println(ll.to_string());
+//      ll.insertBefore(7,11);
+//      System.out.println(ll.to_string());
+      ll.insertAfter(5,80);
+      System.out.println(ll.to_string()+" /after");
     }
 }

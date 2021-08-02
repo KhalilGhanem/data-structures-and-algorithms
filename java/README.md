@@ -10,5 +10,6 @@
 |array-insert-shift|[CC2](array-insert-shift/README.md)|
 |array-binary-search|[CC3](array-binary-search/README.md)|
 |linked-list|[CC5](linked-list/README.md)|
+|linked-list-insertions|[CC6](linked-list/README.md)|
 
 

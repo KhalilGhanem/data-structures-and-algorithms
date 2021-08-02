@@ -15,4 +15,12 @@ Create a Node class, Create a Linked List class which contain the following meth
 * includes: Check if the Linked List contain a certain value.
 * to string: Return all the values in the Linked List.
 
+### Challenge 06:
+
+* Append: Adding a new node to the end of the Linked List.
+* InsertBefore: Adding a new node before the target node in the the Linked List.
+* InsertAfter: Adding a new node after the target node in the the Linked List.
+
+## Whiteboard Process 
+![insertions](CC6.png)
 
