@@ -66,4 +66,49 @@ class AppTest {
       list1.insert(9);
       assertEquals("{ 7 } -> { 5 } -> { 9 } -> Null",list1.to_string(),"This method should return a collection of all the values");
     }
+    @Test void  testAddToEnd(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      assertEquals("{ 7 } -> Null",list1.to_string());
+    }
+    @Test void testMultipleTOEnd(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      assertEquals("{ 7 } -> { 5 } -> { 9 } -> Null",list1.to_string());
+    }
+    @Test void testBeforeMiddle(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      list1.insertBefore(5,11);
+      assertEquals("{ 7 } -> { 11 } -> { 5 } -> { 9 } -> Null",list1.to_string());
+    }
+    @Test void testBeforeFirst(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      list1.insertBefore(7,11);
+      assertEquals("{ 11 } -> { 7 } -> { 5 } -> { 9 } -> Null",list1.to_string());
+    }
+    @Test void testAfterMiddle(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      list1.insertAfter(5,11);
+      assertEquals("{ 7 } -> { 5 } -> { 11 } -> { 9 } -> Null",list1.to_string());
+    }
+    @Test void  testAfterLast (){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      list1.insertAfter(9,11);
+      assertEquals("{ 7 } -> { 5 } -> { 9 } -> { 11 } -> Null",list1.to_string());
+    }
+
 }
