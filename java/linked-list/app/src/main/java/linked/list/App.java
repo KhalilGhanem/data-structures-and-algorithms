@@ -13,9 +13,17 @@ public class App {
       System.out.println(new App().getGreeting());
       LinkedList ll=new LinkedList();
       System.out.println(ll.head);
-      ll.insert(8);
-      ll.insert(5);
-      System.out.println(ll.includes(5));
+//      ll.insert(8);
+//      ll.insert(5);
+//      System.out.println(ll.includes(5));
+//      System.out.println(ll.to_string());
+      ll.append(20);
+      ll.append(5);
+      ll.append(7);
+      System.out.println(ll.to_string());
+      ll.insertBefore(7,11);
+      System.out.println(ll.to_string());
+      ll.insertAfter(7,80);
       System.out.println(ll.to_string());
     }
 }
