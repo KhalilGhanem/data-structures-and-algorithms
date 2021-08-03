@@ -23,7 +23,8 @@ public class App {
 //      System.out.println(ll.to_string());
 //      ll.insertBefore(7,11);
 //      System.out.println(ll.to_string());
-      ll.insertAfter(5,80);
+//      ll.insertAfter(5,80);
       System.out.println(ll.to_string()+" /after");
+      System.out.println(ll.kthFromEnd(2));
     }
 }

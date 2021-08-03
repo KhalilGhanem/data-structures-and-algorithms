@@ -11,5 +11,6 @@
 |array-binary-search|[CC3](array-binary-search/README.md)|
 |linked-list|[CC5](linked-list/README.md)|
 |linked-list-insertions|[CC6](linked-list/README.md)|
+|linked-list-kth|[CC7](linked-list/README.md)|
 
 

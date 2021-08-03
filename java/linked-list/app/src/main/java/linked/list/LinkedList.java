@@ -102,8 +102,31 @@ public class LinkedList {
         }
       }
     }
-
   }
+  public int kthFromEnd( int k){
+    int target = 0;
+    int count=0;
+    Node tail = head;
+    while (tail.next !=null){
+      ++count;
+      tail=tail.next;
+    }
+    int last=count;
+    System.out.println(last+ " last");
+    count=0;
+    while (tail.next !=null){
+      if((last-k)==count){
+        target=tail.value;
+      }
+      count++;
+      tail=tail.next;
+    }
+
+
+
+    return target;
+  }
+
 }
 
 //if (head != null) {
