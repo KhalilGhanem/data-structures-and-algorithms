@@ -24,7 +24,33 @@ public class App {
 //      ll.insertBefore(7,11);
 //      System.out.println(ll.to_string());
 //      ll.insertAfter(5,80);
-      System.out.println(ll.to_string()+" /after");
-      System.out.println(ll.kthFromEnd(2));
+//      System.out.println(ll.to_string()+" /after");
+//      System.out.println(ll.kthFromEnd(2));
+      LinkedList ll2=new LinkedList();
+      ll2.append(10);
+      ll2.append(15);
+      ll2.append(17);
+      LinkedList last=zipLists(ll,ll2);
+      System.out.println(last.to_string());
     }
+  public static LinkedList zipLists(LinkedList lla,LinkedList llb){
+    LinkedList newLL=new LinkedList();
+    Node cureent1=lla.head;
+    Node cureent2=llb.head;
+
+    while(cureent1.next!=null || cureent2.next!=null){
+      if(cureent1.next==null){
+        continue;
+      }else if (cureent2.next==null){
+        continue;
+      }
+      newLL.append(cureent1.value);
+      newLL.append(cureent2.value);
+      System.out.println(newLL.to_string());
+      cureent1=cureent1.next;
+      cureent2=cureent2.next;
+    }
+
+    return newLL;
+  }
 }
