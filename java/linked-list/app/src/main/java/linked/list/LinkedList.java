@@ -105,32 +105,84 @@ public class LinkedList {
       }
     }
   }
-  public int kthFromEnd( int k){
-    int target = 0;
+  public int kthFromEnd( int k) throws Exception{
     int count=0;
-    Node tail = head;
-    while (tail.next !=null){
-      ++count;
-      tail=tail.next;
-    }
-    int last=count;
-    System.out.println(last+ " last");
-    count=0;
-    while (tail.next !=null){
-      if((last-k)==count){
-        target=tail.value;
-      }
+    int target = 0;
+    Node tail=null;
+    Node nextNode=null;
+    Node current=head;
+    while (current!=null){
       count++;
-      tail=tail.next;
+      nextNode=current.next;
+      current.next=tail;
+      tail=current;
+      current=nextNode;
     }
-
-
+    if (k>count){
+      throw new Exception("The number is greater than the length of the linked list ");
+    }else if(0>k){
+      throw new Exception("The number should be positive ");
+    }
+    else {
+      for (int i=0;i<k;i++){
+        tail=tail.next;
+      }
+      target=tail.value;
+    }
 
     return target;
   }
 
 
 }
+// try
+//public static LinkedList reverseLL(LinkedList ll){
+//  LinkedList newList=new LinkedList();
+//  Node current=ll.head;
+//  Node nextNode=null;
+//  Node previousNode=null;
+//  while (current!=null){
+//    nextNode=current.next;
+//    current.next=previousNode;
+//    previousNode=current;
+//    current=nextNode;;
+//  }
+//  while (previousNode!=null){
+//    newList.append(previousNode.value);
+//    previousNode=previousNode.next;
+//  }
+//
+//  return  newList;
+
+
+
+// old
+//int target = 0;
+//  int count=0;
+//  Node tail = head;
+//    while (tail.next !=null){
+//      ++count;
+//      tail=tail.next;
+//      }
+//      int last=count;
+//      System.out.println(last+ " last");
+//      count=0;
+//      while (tail.next !=null){
+//      if((last-k)==count){
+//      target=tail.value;
+//      }
+//      count++;
+//      tail=tail.next;
+//      }
+//
+//
+//
+//      return target;
+//      }
+
+
+
+
 
 //if (head != null) {
 //  if (head.value == target) {

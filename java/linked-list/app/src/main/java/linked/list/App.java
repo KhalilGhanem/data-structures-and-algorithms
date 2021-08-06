@@ -29,7 +29,11 @@ public class App {
 //      System.out.println(ll.to_string());
 //      ll.insertAfter(5,80);
 //      System.out.println(ll.to_string()+" /after");
-//      System.out.println(ll.kthFromEnd(2));
+      try {
+        System.out.println(ll.kthFromEnd(4));
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       //lab 08
 //      LinkedList ll2=new LinkedList();
 //      ll2.append(10);
