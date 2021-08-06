@@ -15,7 +15,15 @@ Create a Node class, Create a Linked List class which contain the following meth
 * toString 
     * Time Big O **O(n)**
     * Space Big O **O(1)**
-    
+* Append    
+    * Time Big O **O(n)**
+    * Space Big O **O(1)**
+* InsertBefore  
+    * Time Big O **O(n)**
+    * Space Big O **O(1)**
+* InsertAfter  
+    * Time Big O **O(n)**
+    * Space Big O **O(1)**    
 ## API
 
 * insert: Adding a new node to the Linked List
