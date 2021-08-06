@@ -20,18 +20,23 @@ public class App {
       ll.append(20);
       ll.append(5);
       ll.append(7);
+      System.out.println(ll.to_string());
+      ll.insert(1);
+      ll.insert(17);
+      System.out.println(ll.to_string());
 //      System.out.println(ll.to_string());
 //      ll.insertBefore(7,11);
 //      System.out.println(ll.to_string());
 //      ll.insertAfter(5,80);
 //      System.out.println(ll.to_string()+" /after");
 //      System.out.println(ll.kthFromEnd(2));
-      LinkedList ll2=new LinkedList();
-      ll2.append(10);
-      ll2.append(15);
-      ll2.append(17);
-      LinkedList last=zipLists(ll,ll2);
-      System.out.println(last.to_string());
+      //lab 08
+//      LinkedList ll2=new LinkedList();
+//      ll2.append(10);
+//      ll2.append(15);
+//      ll2.append(17);
+//      LinkedList last=zipLists(ll,ll2);
+//      System.out.println(last.to_string());
     }
   public static LinkedList zipLists(LinkedList lla,LinkedList llb){
     LinkedList newLL=new LinkedList();

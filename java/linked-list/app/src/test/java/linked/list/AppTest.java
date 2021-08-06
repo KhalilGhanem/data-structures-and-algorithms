@@ -31,7 +31,7 @@ class AppTest {
       list1.insert(7);
       list1.insert(5);
       list1.insert(9);
-      assertEquals(7,list1.head.value,"This method should insure that the head point to the first node in the linked list");
+      assertEquals(9,list1.head.value,"This method should insure that the head point to the first node in the linked list");
     }
 
     // insert multiple nodes into the linked list
@@ -39,7 +39,7 @@ class AppTest {
       LinkedList list1=new LinkedList();
       list1.insert(7);
       list1.insert(5);
-      assertEquals(5,list1.head.next.value,"This method should insure that the linked list have multiple nodes");
+      assertEquals(7,list1.head.next.value,"This method should insure that the linked list have multiple nodes");
     }
 
     // finding a value within the linked list that exists
@@ -64,7 +64,7 @@ class AppTest {
       list1.insert(7);
       list1.insert(5);
       list1.insert(9);
-      assertEquals("{ 7 } -> { 5 } -> { 9 } -> Null",list1.to_string(),"This method should return a collection of all the values");
+      assertEquals("{ 9 } -> { 5 } -> { 7 } -> Null",list1.to_string(),"This method should return a collection of all the values");
     }
     @Test void  testAddToEnd(){
       LinkedList list1=new LinkedList();

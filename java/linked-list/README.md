@@ -6,14 +6,21 @@ Create a Node class, Create a Linked List class which contain the following meth
 
 ## Approach & Efficiency
 
-* Time Big O **O(n)**
-* Space Big O **O(1)**
-
+* Insert
+    * Time Big O **O(1)**
+    * Space Big O **O(1)**
+* includes
+    * Time Big O **O(n)**
+    * Space Big O **O(1)**  
+* toString 
+    * Time Big O **O(n)**
+    * Space Big O **O(1)**
+    
 ## API
 
 * insert: Adding a new node to the Linked List
 * includes: Check if the Linked List contain a certain value.
-* to string: Return all the values in the Linked List.
+* toString: Return all the values in the Linked List.
 
 ### Challenge 06:
 
