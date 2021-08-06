@@ -110,5 +110,63 @@ class AppTest {
       list1.insertAfter(9,11);
       assertEquals("{ 7 } -> { 5 } -> { 9 } -> { 11 } -> Null",list1.to_string());
     }
+    @Test void  testKIsGreater(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      String msg="";
+      try {
+        list1.kthFromEnd(11);
+      } catch (Exception e) {
+        msg=e.getMessage();
+      }
+      String test="The number is greater than the length of the linked list";
+      System.out.println(test);
+      assertEquals("The number is greater than the length of the linked list",test);
+    }
+    @Test void  testKIsEqual(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      list1.append(11);
+      list1.append(15);
+      int target=-1;
+
+      try {
+        target=list1.kthFromEnd(4);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      assertEquals(7,target);
+    }
+    @Test void  testSizeOf1(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      int target=-1;
+      try {
+        target=list1.kthFromEnd(0);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      assertEquals(7,target);
+    }
+    @Test void testHappyPath(){
+      LinkedList list1=new LinkedList();
+      list1.append(7);
+      list1.append(5);
+      list1.append(9);
+      list1.append(11);
+      list1.append(15);
+      int target=-1;
+      try {
+        target=list1.kthFromEnd(2);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      assertEquals(9,target);
+    }
+
 
 }
