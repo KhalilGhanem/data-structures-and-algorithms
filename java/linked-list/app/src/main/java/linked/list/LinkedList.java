@@ -135,27 +135,6 @@ public class LinkedList {
 
 
 }
-// try
-//public static LinkedList reverseLL(LinkedList ll){
-//  LinkedList newList=new LinkedList();
-//  Node current=ll.head;
-//  Node nextNode=null;
-//  Node previousNode=null;
-//  while (current!=null){
-//    nextNode=current.next;
-//    current.next=previousNode;
-//    previousNode=current;
-//    current=nextNode;;
-//  }
-//  while (previousNode!=null){
-//    newList.append(previousNode.value);
-//    previousNode=previousNode.next;
-//  }
-//
-//  return  newList;
-
-
-
 // old
 //int target = 0;
 //  int count=0;

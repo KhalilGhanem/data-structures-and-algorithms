@@ -17,47 +17,51 @@ public class App {
 //      ll.insert(5);
 //      System.out.println(ll.includes(5));
 //      System.out.println(ll.to_string());
-      ll.append(20);
-      ll.append(5);
+      ll.append(1);
+      ll.append(3);
       ll.append(7);
       System.out.println(ll.to_string());
-      ll.insert(1);
-      ll.insert(17);
-      System.out.println(ll.to_string());
+//      ll.insert(1);
+//      ll.insert(17);
+//      System.out.println(ll.to_string());
 //      System.out.println(ll.to_string());
 //      ll.insertBefore(7,11);
 //      System.out.println(ll.to_string());
 //      ll.insertAfter(5,80);
 //      System.out.println(ll.to_string()+" /after");
-      try {
-        System.out.println(ll.kthFromEnd(4));
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
+      // lab07
+//      try {
+//        System.out.println(ll.kthFromEnd(4));
+//      } catch (Exception e) {
+//        e.printStackTrace();
+//      }
       //lab 08
-//      LinkedList ll2=new LinkedList();
-//      ll2.append(10);
-//      ll2.append(15);
-//      ll2.append(17);
-//      LinkedList last=zipLists(ll,ll2);
-//      System.out.println(last.to_string());
+      LinkedList ll2=new LinkedList();
+      ll2.append(5);
+      ll2.append(9);
+      ll2.append(4);
+      System.out.println(ll2.to_string());
+      LinkedList last=zipLists(ll,ll2);
+      System.out.println(last.to_string());
     }
   public static LinkedList zipLists(LinkedList lla,LinkedList llb){
     LinkedList newLL=new LinkedList();
     Node cureent1=lla.head;
     Node cureent2=llb.head;
 
-    while(cureent1.next!=null || cureent2.next!=null){
-      if(cureent1.next==null){
-        continue;
-      }else if (cureent2.next==null){
-        continue;
+    while(cureent1!=null || cureent2!=null){
+      if(cureent1==null){
+        newLL.append(cureent2.value);
+        cureent2=cureent2.next;
+      }else if (cureent2==null){
+        newLL.append(cureent1.value);
+        cureent1=cureent1.next;
+      }else {
+        newLL.append(cureent1.value);
+        newLL.append(cureent2.value);
+        cureent1=cureent1.next;
+        cureent2=cureent2.next;
       }
-      newLL.append(cureent1.value);
-      newLL.append(cureent2.value);
-      System.out.println(newLL.to_string());
-      cureent1=cureent1.next;
-      cureent2=cureent2.next;
     }
 
     return newLL;

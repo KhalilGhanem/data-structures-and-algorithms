@@ -41,7 +41,7 @@ Create a Node class, Create a Linked List class which contain the following meth
 
 
 # Challenge 07: kth from end
-Create a mehod that take K integer number as as a parameter, and return the node’s value that is k places from the tail of the linked list.
+Create a method that take K integer number as as a parameter, and return the node’s value that is k places from the tail of the linked list.
 
 ## Whiteboard Process
 ![kth from end](CC7.png)
@@ -49,7 +49,19 @@ Create a mehod that take K integer number as as a parameter, and return the node
 ## Approach & Efficiency
 
 * Time Big O **O(n)**
- * Space Big O **O(1)** 
+* Space Big O **O(1)** 
+
+# Challenge 08: linked-list-zip
+Create a method called zip lists that take two Linked Lists as parametersmegre them into new Linked List and return it.
+
+## Whiteboard Process
+![kth from end](CC8.png)
+
+## Approach & Efficiency
+
+* Time Big O **O(n)**
+* Space Big O **O(1)** 
+
 
 
 

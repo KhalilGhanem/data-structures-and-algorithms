@@ -5,6 +5,7 @@ package linked.list;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import static linked.list.App.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
@@ -110,6 +111,7 @@ class AppTest {
       list1.insertAfter(9,11);
       assertEquals("{ 7 } -> { 5 } -> { 9 } -> { 11 } -> Null",list1.to_string());
     }
+    //Challenge 7
     @Test void  testKIsGreater(){
       LinkedList list1=new LinkedList();
       list1.append(7);
@@ -167,6 +169,39 @@ class AppTest {
       }
       assertEquals(9,target);
     }
+    // Challenge 8
+  @Test void  testZipArray1Empty(){
+    LinkedList list1=new LinkedList();
+    LinkedList list2=new LinkedList();
+    list2.append(7);
+    list2.append(5);
+    list2.append(9);
+    LinkedList newList=zipLists(list1,list2);
+    assertEquals("{ 7 } -> { 5 } -> { 9 } -> Null",newList.to_string());
+  }
+  @Test void testZipDifferentSize(){
+    LinkedList list1=new LinkedList();
+    list1.append(1);
+    list1.append(2);
+    LinkedList list2=new LinkedList();
+    list2.append(7);
+    list2.append(5);
+    list2.append(9);
+    LinkedList newList=zipLists(list1,list2);
+    assertEquals("{ 1 } -> { 7 } -> { 2 } -> { 5 } -> { 9 } -> Null",newList.to_string());
+  }
+  @Test void testZipHappyPath(){
+    LinkedList list1=new LinkedList();
+    list1.append(1);
+    list1.append(2);
+    list1.append(3);
+    LinkedList list2=new LinkedList();
+    list2.append(7);
+    list2.append(5);
+    list2.append(9);
+    LinkedList newList=zipLists(list1,list2);
+    assertEquals("{ 1 } -> { 7 } -> { 2 } -> { 5 } -> { 3 } -> { 9 } -> Null",newList.to_string());
+  }
 
 
 }
