@@ -47,12 +47,22 @@ public class App {
 //        e.printStackTrace();
 //      }
 
-      System.out.println(firstQueue);
-      try {
-        System.out.println("peek "+firstQueue.peek());
-        System.out.println("peek "+firstQueue.isEmpty());
-      } catch (Exception e) {
-        e.printStackTrace();
+//      System.out.println(firstQueue);
+//      try {
+//        System.out.println("peek "+firstQueue.peek());
+//        System.out.println("peek "+firstQueue.isEmpty());
+//      } catch (Exception e) {
+//        e.printStackTrace();
+//      }
+      PseudoQueue<Integer> firstPQ=new PseudoQueue<Integer>();
+
+      firstPQ.firstStack.push(15);
+      firstPQ.firstStack.push(10);
+      firstPQ.firstStack.push(5);
+      System.out.println(firstPQ.firstStack.toString());
+      while (firstPQ.firstStack.top!=null){
+        System.out.println(firstPQ.firstStack.top.value);
+        firstPQ.firstStack.top=firstPQ.firstStack.top.next;
       }
 
     }

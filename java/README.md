@@ -13,5 +13,6 @@
 |linked-list-insertions|[CC6](linked-list/README.md)|
 |linked-list-kth|[CC7](linked-list/README.md)|
 |linked-list-zip|[CC8](linked-list/README.md)|
+|stack-and-queue|[CC10](stack-and-queue/README.md)|
 
 
