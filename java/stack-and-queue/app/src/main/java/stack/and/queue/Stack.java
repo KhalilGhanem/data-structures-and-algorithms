@@ -20,10 +20,10 @@ public class Stack<T> {
     if (top==null){
       throw new Exception("The Stack is empty");
     }else {
-      Node temp=top;
+      Node <T>temp=top;
       top=top.next;
       temp.next=null;
-      return top.value;
+      return temp.value;
     }
 
   }

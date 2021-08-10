@@ -29,7 +29,7 @@ class AppTest {
       firstStack.push(13);
       firstStack.push(11);
       try {
-        assertEquals(13,firstStack.pop());
+        assertEquals(11,firstStack.pop());
       } catch (Exception e) {
         e.printStackTrace();
       }
@@ -89,7 +89,7 @@ class AppTest {
       firstQueue.enqueue(13);
       firstQueue.enqueue(11);
       try {
-        assertEquals(13,firstQueue.dequeue());
+        assertEquals(15,firstQueue.dequeue());
       } catch (Exception e) {
         e.printStackTrace();
       }
@@ -133,5 +133,32 @@ class AppTest {
     }
     assertEquals("The queue is empty",msg);
   }
+
+  // Challenge 11:
+  @Test void  testPseudoQueueEmptyEnqueue(){
+    PseudoQueue<Integer> firstPQ=new PseudoQueue<Integer>();
+    try {
+      firstPQ.dequeue();
+    } catch (Exception e) {
+//      e.getMessage();
+      assertEquals("The PseudoQueue is Empty",e.getMessage());
+    }
+
+  }
+  @Test void testPseudoQueueNonEmptyEnqueue(){
+    PseudoQueue<Integer> firstPQ=new PseudoQueue<Integer>();
+    firstPQ.enqueue(7);
+    firstPQ.enqueue(11);
+    firstPQ.enqueue(15);
+    try {
+      assertEquals(7,firstPQ.dequeue());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+
+
+
 
 }

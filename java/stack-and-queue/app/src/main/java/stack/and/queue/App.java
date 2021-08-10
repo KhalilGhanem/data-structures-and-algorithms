@@ -18,7 +18,8 @@ public class App {
 //        firstStack.push(117);
 //        int x;
 //      try {
-//        System.out.println("peek "+firstStack.peek());
+//        System.out.println("peek1 "+firstStack.pop());
+//        System.out.println("peek2 "+firstStack.pop());
 //      } catch (Exception e) {
 //        e.printStackTrace();
 //      }
@@ -35,25 +36,46 @@ public class App {
 //          current=current.next;
 //        }
 //      System.out.println(firstStack.toString());
-      Queue<Integer>firstQueue=new Queue<Integer>();
-      firstQueue.enqueue(15);
-      firstQueue.enqueue(11);
-      firstQueue.enqueue(13);
 
+//      Queue<Integer>firstQueue=new Queue<Integer>();
+//      firstQueue.enqueue(15);
+//      firstQueue.enqueue(11);
+//      firstQueue.enqueue(13);
+//
 //      try {
-//        firstQueue.dequeue();
+////        firstQueue.dequeue();
 //        System.out.println(firstQueue.dequeue()+" value");
 //      } catch (Exception e) {
 //        e.printStackTrace();
 //      }
+//      System.out.println(firstQueue.front.value+" after");
 
-      System.out.println(firstQueue);
+//      System.out.println(firstQueue);
+//      try {
+//        System.out.println("peek "+firstQueue.peek());
+//        System.out.println("peek "+firstQueue.isEmpty());
+//      } catch (Exception e) {
+//        e.printStackTrace();
+//      }
+      PseudoQueue<Integer> firstPQ=new PseudoQueue<Integer>();
+//      firstPQ.enqueue(7);
+//      firstPQ.enqueue(11);
+//      firstPQ.enqueue(15);
+
+//      System.out.println(firstPQ.firstStack.toString());
+
       try {
-        System.out.println("peek "+firstQueue.peek());
-        System.out.println("peek "+firstQueue.isEmpty());
+        System.out.println("the value shoud be 7 "+firstPQ.dequeue());
       } catch (Exception e) {
         e.printStackTrace();
       }
+
+//      try {
+//        System.out.println("should be 7 "+firstPQ.secondStack.pop());
+//      } catch (Exception e) {
+//        e.printStackTrace();
+//      }
+
 
     }
 }

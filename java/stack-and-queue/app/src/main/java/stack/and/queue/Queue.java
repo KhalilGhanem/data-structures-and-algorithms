@@ -22,10 +22,11 @@ public class Queue<T> {
     if (front==null){
     throw new Exception("The queue is empty");
     }else {
-      Node temp=front;
+      Node<T> temp=front;
+      System.out.println(temp.value+" fromde");
       front=front.next;
       temp.next=null;
-      return front.value;
+      return temp.value;
     }
   }
 
