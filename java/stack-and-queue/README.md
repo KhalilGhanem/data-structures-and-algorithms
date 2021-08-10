@@ -25,3 +25,25 @@ This Challenge is about implement Stacks and  Queues
   * dequeue: Removes the node from the front of the queue and Returns front value.
   * peek: Returns front value.
   * isEmpty: Returns: Boolean indicating whether or not the queue is empty.
+
+## Challenge 11:
+Create PseudoQueue class by using two Stack instances.
+
+## Whiteboard Process
+
+![PseudoQueue](cc11.png)
+
+## Approach & Efficiency
+
+* enqueue
+   * Time Big O **O(1)**
+   * Space Big O **O(1)**
+ * dequeue
+   * Time Big O **O(n)**
+   * Space Big O **O(1)**
+
+## API
+
+* enqueue : Insert a value into the PseudoQueue using, FIFO approach.
+* dequeue: Extract a value from the PseudoQueue using, FIFO approach.
+
