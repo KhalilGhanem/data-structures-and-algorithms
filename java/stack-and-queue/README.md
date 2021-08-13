@@ -31,7 +31,7 @@ Create PseudoQueue class by using two Stack instances.
 
 ## Whiteboard Process
 
-![PseudoQueue](cc11.png)
+![PseudoQueue](CC11.png)
 
 ## Approach & Efficiency
 
