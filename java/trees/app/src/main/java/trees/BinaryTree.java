@@ -1,0 +1,78 @@
+package trees;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BinaryTree<T> {
+  Node<T>root;
+  ArrayList<T> preList = new ArrayList<T>();
+  ArrayList<T> inList = new ArrayList<T>();
+  ArrayList<T> postList = new ArrayList<T>();
+  //ArrayList<String> cars = new ArrayList<String>();
+
+  public BinaryTree(){
+    this.root=null;
+  }
+
+
+  public BinaryTree(T value){
+    Node<T>newNode=new Node<>(value);
+    if (root==null){
+      root=newNode;
+    }
+  }
+
+  public ArrayList<T> preOrder(Node<T> root) throws Exception{
+    if (root==null){
+      throw new Exception("The tree in empty");
+    }
+
+    if(root!=null){
+      preList.add(root.value);
+    }
+    if (root.left!=null){
+      preOrder(root.left);
+    }
+    if(root.right!=null){
+      preOrder(root.right);
+    }
+
+    return preList;
+  }
+
+  public ArrayList<T> inOrder(Node<T> root) throws Exception {
+    if (root==null){
+      throw new Exception("The tree in empty");
+    }
+
+    if (root.left!=null){
+      inOrder(root.left);
+    }
+    if (root!=null){
+      inList.add(root.value);
+    }
+    if (root.right!=null){
+      inOrder(root.right);
+    }
+
+    return inList;
+  }
+
+  public ArrayList<T> postOrder(Node<T> root) throws Exception{
+    if (root==null){
+      throw new Exception("The tree in empty");
+    }
+    if (root.left!=null){
+      postOrder(root.left);
+    }
+    if (root.right!=null){
+      postOrder(root.right);
+    }
+    if (root!=null){
+      postList.add(root.value);
+    }
+
+    return postList;
+  }
+
+}
