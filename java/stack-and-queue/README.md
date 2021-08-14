@@ -47,3 +47,22 @@ Create PseudoQueue class by using two Stack instances.
 * enqueue : Insert a value into the PseudoQueue using, FIFO approach.
 * dequeue: Extract a value from the PseudoQueue using, FIFO approach.
 
+## Challenge 12:
+Create a class called AnimalShelter which holds only dogs and cats, and it using a first-in, first-out approach.
+
+## Whiteboard Process
+![AnimalShelter](CC12.png)
+
+## Approach & Efficiency
+
+* enqueue
+   * Time Big O **O(1)**
+   * Space Big O **O(1)**
+ * dequeue
+   * Time Big O **O(n)**
+   * Space Big O **O(1)**
+
+## API
+
+* enqueue : Insert an instance of animal type of dog or cat into the Queue using, FIFO approach.
+* dequeue: Extract a value from the Queue using, FIFO approach.

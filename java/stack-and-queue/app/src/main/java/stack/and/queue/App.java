@@ -64,17 +64,30 @@ public class App {
 
 //      System.out.println(firstPQ.firstStack.toString());
 
-      try {
-        System.out.println("the value shoud be 7 "+firstPQ.dequeue());
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
+//      try {
+//        System.out.println("the value shoud be 7 "+firstPQ.dequeue());
+//      } catch (Exception e) {
+//        e.printStackTrace();
+//      }
 
 //      try {
 //        System.out.println("should be 7 "+firstPQ.secondStack.pop());
 //      } catch (Exception e) {
 //        e.printStackTrace();
 //      }
+
+      // cc12
+      Animal cat=new Cat ();
+      Animal dog=new Dog ();
+      Animal cow=new Animal ();
+
+      AnimalShelter<Animal> as=new AnimalShelter<Animal>();
+      as.enqueue(cat);
+      as.enqueue(dog);
+      as.enqueue(cow);
+      System.out.println(as.rear.value+" out");
+      System.out.println(as.dequeue("Animal"));
+
 
 
     }

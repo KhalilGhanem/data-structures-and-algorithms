@@ -15,5 +15,6 @@
 |linked-list-zip|[CC8](linked-list/README.md)|
 |stack-and-queue|[CC10](stack-and-queue/README.md)|
 |pseudo queue|[CC11](stack-and-queue/README.md)|
+|AnimalShelter|[CC12](stack-and-queue/README.md)|
 
 

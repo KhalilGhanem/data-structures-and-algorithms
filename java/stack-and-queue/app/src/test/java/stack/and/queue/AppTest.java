@@ -3,6 +3,7 @@
  */
 package stack.and.queue;
 
+import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -156,6 +157,32 @@ class AppTest {
       e.printStackTrace();
     }
   }
+
+  // Challenge 12:
+  @Test void testAnimalShelterEmptyDequeue(){
+    AnimalShelter<Animal> as=new AnimalShelter<Animal>();
+    assertNull(as.dequeue("any"));
+  }
+  @Test void  AnimalShelterEqueue(){
+    AnimalShelter<Animal> as=new AnimalShelter<Animal>();
+    Animal cow=new Animal ();
+    Animal cat=new Cat ();
+    as.enqueue(cow);
+    as.enqueue(cat);
+    assertTrue(as.front.value.toString().contains("Cat"));
+  }
+  @Test void  AnimalShelterDequeue(){
+    AnimalShelter<Animal> as=new AnimalShelter<Animal>();
+    Animal cow=new Animal ();
+    Animal cat=new Cat ();
+    Animal dog=new Dog ();
+    as.enqueue(cow);
+    as.enqueue(cat);
+    as.enqueue(dog);
+    assertTrue(as.dequeue("cat").contains("cat"));
+  }
+
+
 
 
 
