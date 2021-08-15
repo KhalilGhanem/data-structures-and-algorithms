@@ -4,6 +4,9 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -11,4 +14,92 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+    @Test void testTreeInstantiateEmpty(){
+      BinaryTree<Integer> bs=new BinaryTree<>();
+      assertNull(bs.root);
+    }
+  @Test void testTreeInstantiateSingleRoot(){
+    BinaryTree<Integer> bs=new BinaryTree<>(15);
+    assertEquals(15,bs.root.value);
+  }
+  @Test void testTreeAddLeftChild(){
+    BinaryTree<Integer> bs=new BinaryTree<>(15);
+    bs.root.left=new Node<>(3);
+    assertEquals(3,bs.root.left.value);
+  }
+  @Test void testTreeAddRightChild(){
+    BinaryTree<Integer> bs=new BinaryTree<>(15);
+    bs.root.right=new Node<>(7);
+    assertEquals(7,bs.root.right.value);
+  }
+  @Test void testTreePreOrder(){
+    BinaryTree<Integer> bs=new BinaryTree(1);
+    bs.root.left=new Node<>(3);
+    bs.root.left.left=new Node<>(7);
+    bs.root.left.right=new Node<>(9);
+    bs.root.right=new Node<>(5);
+    bs.root.right.left=new Node<>(11);
+    bs.root.right.right=new Node<>(13);
+    ArrayList<Integer> result=null;
+    ArrayList<Integer> test=new ArrayList<Integer>();
+    test.add(1); test.add(3); test.add(7); test.add(9);
+    test.add(5); test.add(11); test.add(13);
+
+    try {
+      result=bs.preOrder(bs.root);
+      assertEquals(test,result);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+  @Test void testTreeInOrder() {
+    BinaryTree<Integer> bs = new BinaryTree(1);
+    bs.root.left = new Node<>(3);
+    bs.root.left.left = new Node<>(7);
+    bs.root.left.right = new Node<>(9);
+    bs.root.right = new Node<>(5);
+    bs.root.right.left = new Node<>(11);
+    bs.root.right.right = new Node<>(13);
+    ArrayList<Integer> result = null;
+    ArrayList<Integer> test = new ArrayList<Integer>();
+    test.add(7);
+    test.add(3);
+    test.add(9);
+    test.add(1);
+    test.add(11);
+    test.add(5);
+    test.add(13);
+    try {
+      result = bs.inOrder(bs.root);
+      assertEquals(test, result);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+  @Test void testTreePostOrder() {
+    BinaryTree<Integer> bs = new BinaryTree(1);
+    bs.root.left = new Node<>(3);
+    bs.root.left.left = new Node<>(7);
+    bs.root.left.right = new Node<>(9);
+    bs.root.right = new Node<>(5);
+    bs.root.right.left = new Node<>(11);
+    bs.root.right.right = new Node<>(13);
+    ArrayList<Integer> result = null;
+    ArrayList<Integer> test = new ArrayList<Integer>();
+    test.add(7);
+    test.add(9);
+    test.add(3);
+    test.add(11);
+    test.add(13);
+    test.add(5);
+    test.add(1);
+    try {
+      result = bs.postOrder(bs.root);
+      assertEquals(test, result);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+
 }
