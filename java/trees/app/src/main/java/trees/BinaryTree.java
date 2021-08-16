@@ -75,4 +75,25 @@ public class BinaryTree<T> {
     return postList;
   }
 
+  public int maximumValue(){
+    int max=0;
+    if (root==null){
+      return max;
+    }else {
+
+      try {
+        ArrayList<T> result=postOrder(root);
+        for (T t : result) {
+          if ((int)t>max){
+            max=(int)t;
+          }
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+
+    return max;
+  }
+
 }
