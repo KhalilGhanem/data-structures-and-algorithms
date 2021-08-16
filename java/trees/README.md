@@ -13,3 +13,18 @@ Add & Contains:
 ## API
 * Add: Adds a new node with that value in the correct location in the binary search tree.
 * Contains: Returns: boolean indicating whether or not the value is in the tree at least once.
+
+# Challenge 16:
+To Write a function that find the maximum value stored in the tree.
+
+## Whiteboard Process
+![tree-max](CC16.png)
+
+## Approach & Efficiency
+* maximumValue
+     * Time Big O **O(n)**
+     * Space Big O **O(n)**
+
+
+## API
+* maximumValue: Find the maximum value stored in the tree.

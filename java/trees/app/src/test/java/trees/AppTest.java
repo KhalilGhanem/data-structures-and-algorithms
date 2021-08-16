@@ -100,6 +100,21 @@ class AppTest {
       e.printStackTrace();
     }
   }
+  // Challenge 16
+  @Test void testTreeMaxVlue(){
+
+      BinaryTree<Integer> bs=new BinaryTree(1);
+      System.out.println(bs.root.value+" test root");
+      bs.root.left=new Node<>(70);
+      bs.root.left.left=new Node<>(7);
+      bs.root.left.right=new Node<>(9);
+      bs.root.right=new Node<>(5);
+      bs.root.right.left=new Node<>(11);
+      bs.root.right.right=new Node<>(13);
+
+      assertEquals(70,bs.maximumValue());
+
+  }
 
 
 }
