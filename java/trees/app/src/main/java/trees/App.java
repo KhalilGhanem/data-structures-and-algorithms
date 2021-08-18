@@ -3,9 +3,14 @@
  */
 package trees;
 
+import javax.management.Query;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-public class App {
+
+public class App{
     public String getGreeting() {
         return "Hello World!";
     }
@@ -48,9 +53,37 @@ public class App {
 //      System.out.println(bst.Contains(10));
 
       /// CC16
-      System.out.println("max v "+bs.maximumValue());
+//      System.out.println("max v "+bs.maximumValue());
 
+      // CC17
+      List list=breadthFirst(bs);
 
+      for (Object o : list) {
+        System.out.println("list item "+o);
+      }
+
+    }
+
+    public static List<Integer> breadthFirst(BinaryTree<Integer> bt){
+      List<Integer> list = new ArrayList<Integer>();
+      Queue<Node> q = new LinkedList();
+      if (bt.root ==null){
+        return null;
+      }else {
+        q.add(bt.root);
+        while (!q.isEmpty()){
+          Node newnode=q.remove();
+          if (newnode.left!=null){
+            q.add(newnode.left);
+          }
+          if(newnode.right!=null){
+            q.add(newnode.right);
+          }
+          list.add((int)newnode.value);
+        }
+      }
+
+      return list;
     }
 
 }

@@ -4,7 +4,7 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
-
+import static trees.App.*;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -114,6 +114,25 @@ class AppTest {
 
       assertEquals(70,bs.maximumValue());
 
+  }
+  @Test void testTreeBreadthFirst(){
+    BinaryTree<Integer> bs=new BinaryTree(1);
+    System.out.println(bs.root.value+" test root");
+    bs.root.left=new Node<>(70);
+    bs.root.left.left=new Node<>(7);
+    bs.root.left.right=new Node<>(9);
+    bs.root.right=new Node<>(5);
+    bs.root.right.left=new Node<>(11);
+    bs.root.right.right=new Node<>(13);
+    ArrayList<Integer> test = new ArrayList<Integer>();
+    test.add(1);
+    test.add(70);
+    test.add(5);
+    test.add(7);
+    test.add(9);
+    test.add(11);
+    test.add(13);
+    assertEquals(test,breadthFirst(bs));
   }
 
 

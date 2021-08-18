@@ -28,3 +28,19 @@ To Write a function that find the maximum value stored in the tree.
 
 ## API
 * maximumValue: Find the maximum value stored in the tree.
+
+
+# Challenge 17:
+To Write a function that takesa tree as an arguments and returna list of all values in the tree, in the order they were encountered.
+
+## Whiteboard Process
+![Breadth-first Traversal](CC17.png)
+
+## Approach & Efficiency
+* breadthFirst
+     * Time Big O **O(n)**
+     * Space Big O **O(n)**
+
+
+## API
+* breadthFirst: takes a tree and return a list list of all values in the tree in Breadth-first order.
