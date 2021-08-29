@@ -1,7 +1,9 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree<T> {
   Node<T>root;
@@ -94,6 +96,27 @@ public class BinaryTree<T> {
     }
 
     return max;
+  }
+  public List<T> breadthFirstTraversal(){
+    List<T> list = new ArrayList<>();
+    if(this.root != null){
+      Queue q = new LinkedList();
+      q.offer(this.root);
+      while(q.peek() != null){
+        Node front = (Node) q.poll();
+        list.add((T) front.value);
+        if(front.left != null){
+          q.offer(front.left);
+        }
+        if(front.right !=null){
+          q.offer(front.right);
+        }
+      }
+    }
+    else{
+      throw new NullPointerException("Empty Queue");
+    }
+    return list;
   }
 
 }
