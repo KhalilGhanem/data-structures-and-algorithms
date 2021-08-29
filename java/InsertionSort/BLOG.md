@@ -19,6 +19,13 @@ Insertion sort is a simple sorting algorithm that builds the final sorted array 
 ## Trace
 Sample Array: [8,4,23,42,16,15]
 
-![Insertion Sort](Blog26.png)              
+![Insertion Sort](Blog26.png)
+
+
+## Efficency
+* Time: O(n^2)
+   The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.
+* Space: O(1)
+  No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
 
      
