@@ -18,5 +18,6 @@
 |AnimalShelter|[CC12](stack-and-queue/README.md)|
 |Trees|[CC15](trees/README.md)|
 |Tree-max|[CC16](trees/README.md)|
+|InsertionSort|[CC26](InsertionSort/README.md)|
 
 
