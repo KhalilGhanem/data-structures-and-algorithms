@@ -20,6 +20,6 @@
 |Tree-max|[CC16](trees/README.md)|
 |Breadth-first|[CC17](trees/README.md)|
 |InsertionSort|[CC26](InsertionSort/README.md)|
-
-
-
+|InsertionSort|[Blog](InsertionSort/Blog26.png)|
+|MergeSort|[CC27](MergeSort/CC27.png)|
+|MergeSort|[Blog](MergeSort/Blog27.md)|
