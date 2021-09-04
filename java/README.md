@@ -23,3 +23,5 @@
 |InsertionSort|[Blog](InsertionSort/Blog26.png)|
 |MergeSort|[CC27](MergeSort/CC27.png)|
 |MergeSort|[Blog](MergeSort/Blog27.md)|
+|QuickSort|[CC28](MergeSort/CC28.png)|
+|QuickSort|[Blog](MergeSort/Blog28.md)|
