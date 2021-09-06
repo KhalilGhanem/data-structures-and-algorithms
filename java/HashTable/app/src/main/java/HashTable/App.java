@@ -27,4 +27,12 @@ public class App {
       System.out.println(HT.contains(1));
 
     }
+//    public static String repeatedWord(String text){
+//      String worrds[]=text.split(" ");
+//
+//      HashTable<String>HT=new HashTable<String>(text.length());
+//      for (int i=0;i< worrds.length;i++){
+//        if (HT.contains(HT.)
+//      }
+//    }
 }
