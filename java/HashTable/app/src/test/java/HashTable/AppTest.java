@@ -4,6 +4,9 @@
 package HashTable;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static HashTable.App.*;
 
@@ -48,6 +51,49 @@ class AppTest {
       assertEquals("a",repeatedWord(test1));
     assertEquals("summer",repeatedWord(test2));
 
+  }
+
+  @Test void  testTreeIntersection(){
+    BinaryTree<Integer> firstTree=new BinaryTree(150);
+    firstTree.root.left=new Node<Integer>(100);
+    firstTree.root.right=new Node<Integer>(250);
+
+    firstTree.root.left.left=new Node<Integer>(75);
+    firstTree.root.left.right=new Node<Integer>(160);
+    firstTree.root.left.right.left=new Node<Integer>(125);
+    firstTree.root.left.right.right=new Node<Integer>(175);
+
+    firstTree.root.right.left=new Node<Integer>(200);
+    firstTree.root.right.right=new Node<Integer>(350);
+    firstTree.root.right.right.left=new Node<Integer>(300);
+    firstTree.root.right.right.right=new Node<Integer>(500);
+
+    //second tree
+    BinaryTree<Integer> secondTree=new BinaryTree(42);
+    secondTree.root.left=new Node<Integer>(100);
+    secondTree.root.right=new Node<Integer>(600);
+
+    secondTree.root.left.left=new Node<Integer>(15);
+    secondTree.root.left.right=new Node<Integer>(160);
+    secondTree.root.left.right.left=new Node<Integer>(125);
+    secondTree.root.left.right.right=new Node<Integer>(175);
+
+    secondTree.root.right.left=new Node<Integer>(200);
+    secondTree.root.right.right=new Node<Integer>(350);
+    secondTree.root.right.right.left=new Node<Integer>(4);
+    secondTree.root.right.right.right=new Node<Integer>(500);
+
+    ArrayList newlist=treeIntersection(firstTree,secondTree);
+    ArrayList testArray=new ArrayList();
+    testArray.add(100);
+    testArray.add(160);
+    testArray.add(125);
+    testArray.add(175);
+    testArray.add(200);
+    testArray.add(350);
+    testArray.add(500);
+
+    assertEquals(testArray,newlist);
   }
 
 }

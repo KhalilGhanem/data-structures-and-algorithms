@@ -27,3 +27,4 @@
 |QuickSort|[Blog](MergeSort/Blog28.md)|
 |HashTable|[CC30](HashTable/README.md)|
 |Repeated-Word|[CC31](HashTable/README.md)|
+|Tree-Intersection|[CC32](HashTable/README.md)|
