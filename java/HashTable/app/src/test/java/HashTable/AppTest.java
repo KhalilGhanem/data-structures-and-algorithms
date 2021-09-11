@@ -5,6 +5,7 @@ package HashTable;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import static HashTable.App.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
@@ -39,6 +40,14 @@ class AppTest {
 //    HT.add(3,"PSG");
 //    HT.add(1,"ATM");
   assertEquals(3,HT.hash("1"));
+  }
+  @Test void testRepeatedWord(){
+      String test1="Once upon  a time, there was a brave princess who...";
+      String test2="It was a queer, sultry summer , the summer they electrocuted the Rosenbergs";
+
+      assertEquals("a",repeatedWord(test1));
+    assertEquals("summer",repeatedWord(test2));
+
   }
 
 }
