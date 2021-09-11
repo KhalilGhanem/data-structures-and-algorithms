@@ -4,6 +4,8 @@
 // Resource https://www.youtube.com/watch?v=bBKu9gJr_y0
 package HashTable;
 
+import java.util.*;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -13,18 +15,84 @@ public class App {
         System.out.println(new App().getGreeting());
 
         HashTable<String>HT=new HashTable<String>(20);
-        HT.add(7,"RM");
-        HT.add(20,"MAN U");
-        HT.add(0,"PSG");
-        HT.add(1,"ATM");
-      System.out.println((1*7)%20);
-      System.out.println("get ..."+HT.get(0));
-//      try {
-//        System.out.println(HT.get(90));
-//      } catch (Exception e) {
-//        e.printStackTrace();
-//      }
-      System.out.println(HT.contains(1));
+        HT.add("7","RM");
+        HT.add("20","MAN U");
+        HT.add("0","PSG");
+        HT.add("1","ATM");
+      System.out.println("hashkey---"+HT.hash("1"));
+      System.out.println("get ..."+HT.get("1"));
+
+      System.out.println(HT.contains("1"));
+      System.out.println(HT.toString());
+
+      System.out.println(repeatedWord("Once upon  a time, there was a brave princess who..."));
+
+      //CC32
+      //first tree
+//      BinaryTree<Integer> firstTree=new BinaryTree(150);
+//      firstTree.root.left=new Node<Integer>(100);
+//      firstTree.root.right=new Node<Integer>(250);
+//
+//      firstTree.root.left.left=new Node<Integer>(75);
+//      firstTree.root.left.right=new Node<Integer>(160);
+//      firstTree.root.left.right.left=new Node<Integer>(125);
+//      firstTree.root.left.right.right=new Node<Integer>(175);
+//
+//      firstTree.root.right.left=new Node<Integer>(200);
+//      firstTree.root.right.right=new Node<Integer>(350);
+//      firstTree.root.right.right.left=new Node<Integer>(300);
+//      firstTree.root.right.right.right=new Node<Integer>(500);
+//
+//      //second tree
+//      BinaryTree<Integer> secondTree=new BinaryTree(42);
+//      firstTree.root.left=new Node<Integer>(100);
+//      firstTree.root.right=new Node<Integer>(600);
+//
+//      firstTree.root.left.left=new Node<Integer>(15);
+//      firstTree.root.left.right=new Node<Integer>(160);
+//      firstTree.root.left.right.left=new Node<Integer>(125);
+//      firstTree.root.left.right.right=new Node<Integer>(175);
+//
+//      firstTree.root.right.left=new Node<Integer>(200);
+//      firstTree.root.right.right=new Node<Integer>(350);
+//      firstTree.root.right.right.left=new Node<Integer>(4);
+//      firstTree.root.right.right.right=new Node<Integer>(500);
+
 
     }
+//    public static ArrayList treeIntersection(BinaryTree first , BinaryTree second){
+//      if (first.root==null || second.root==null){
+//        return null;
+//      }
+//      ArrayList<Node> arr = new ArrayList<>();
+//      HashTable<Integer>HT=new HashTable<Integer>(20);
+//
+////      try {
+////        ArrayList  firstList = first.preOrder(first.root);
+////        for (Object o : firstList) {
+////          HT.add(o,o);
+////        }
+////
+////      } catch (Exception e) {
+////        e.printStackTrace();
+////      }
+//
+//
+//      return arr;
+//    }
+
+    public static String repeatedWord(String text){
+      String words[]=text.toLowerCase().split(" ");
+      Hashtable<String, String> wordsTable = new Hashtable<>();
+
+      for (int i = 0; i < words.length; i++) {
+        if (wordsTable.get(words[i])!=null) {
+          return words[i];
+        }
+        wordsTable.put(words[i], words[i]);
+      }
+      return null;
+    }
+
+
 }

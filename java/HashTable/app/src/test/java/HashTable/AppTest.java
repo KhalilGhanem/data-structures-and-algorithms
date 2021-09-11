@@ -5,6 +5,7 @@ package HashTable;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import static HashTable.App.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
@@ -13,24 +14,24 @@ class AppTest {
     }
     @Test void testAdding(){
       HashTable<String>HT=new HashTable<String>(20);
-      HT.add(7,"RM");
-      assertTrue(HT.contains(7));
+      HT.add("7","RM");
+      assertTrue(HT.contains("7"));
     }
   @Test void testRetrieving(){
     HashTable<String>HT=new HashTable<String>(20);
-    HT.add(7,"RM");
-    HT.add(11,"MAN U");
-    HT.add(3,"PSG");
-    HT.add(1,"ATM");
-    assertEquals("RM",HT.get(7));
+    HT.add("7","RM");
+    HT.add("11","MAN U");
+    HT.add("3","PSG");
+    HT.add("1","ATM");
+    assertEquals("RM",HT.get("7"));
   }
   @Test void testItemNotExist (){
     HashTable<String>HT=new HashTable<String>(20);
-    HT.add(7,"RM");
-    HT.add(11,"MAN U");
-    HT.add(3,"PSG");
-    HT.add(1,"ATM");
-    assertNull(HT.get(600));
+    HT.add("7","RM");
+    HT.add("11","MAN U");
+    HT.add("3","PSG");
+    HT.add("1","ATM");
+    assertNull(HT.get("600"));
   }
   @Test void testInRangeValue(){
     HashTable<String>HT=new HashTable<String>(20);
@@ -38,7 +39,15 @@ class AppTest {
 //    HT.add(11,"MAN U");
 //    HT.add(3,"PSG");
 //    HT.add(1,"ATM");
-  assertEquals(7,HT.hash(1));
+  assertEquals(3,HT.hash("1"));
+  }
+  @Test void testRepeatedWord(){
+      String test1="Once upon  a time, there was a brave princess who...";
+      String test2="It was a queer, sultry summer , the summer they electrocuted the Rosenbergs";
+
+      assertEquals("a",repeatedWord(test1));
+    assertEquals("summer",repeatedWord(test2));
+
   }
 
 }

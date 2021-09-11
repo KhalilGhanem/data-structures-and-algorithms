@@ -18,3 +18,18 @@ Implement a Hashtable Class with the following methods:
 * get: Returns: Value associated with that key in the table
 * contains: Check  key exists in the table already.
 * hash: Returns Index in the collection for that key
+
+# Repeated-Word
+
+## Challenge Summary
+
+To Write a function called repeated word that finds the first word to occur more than once in a string.
+
+## Whiteboard Process
+
+![Repeated-Word](CC31.png)
+
+## Approach & Efficiency
+
+* Time: O(n)
+* Space: O(n)
