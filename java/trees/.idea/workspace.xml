@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="181c6133-8aa2-4db7-bc50-cf387ab0afbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/HashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HashTable/app/src/main/java/HashTable/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>

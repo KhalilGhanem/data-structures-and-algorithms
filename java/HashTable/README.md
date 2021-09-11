@@ -33,3 +33,18 @@ To Write a function called repeated word that finds the first word to occur more
 
 * Time: O(n)
 * Space: O(n)
+
+# Tree-Intersection
+
+## Challenge Summary
+
+To Write a function called tree intersection that takes two binary trees as Arguments and return an array contains all the common elements of the trees.
+
+## Whiteboard Process
+
+![Tree-Intersection](CC32.png)
+
+## Approach & Efficiency
+
+* Time: O(n)
+* Space: O(n)

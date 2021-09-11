@@ -4,6 +4,8 @@ public class Node <T>{
   T key;
   T value;
   Node next;
+  Node<T>left;
+  Node<T>right;
 
   public Node(T key,T value){
     this.key=key;
@@ -11,9 +13,9 @@ public class Node <T>{
   }
   public Node(){};
 
-//  public Node(T value){
-//    this.value=value;
-//  }
+  public Node(T value){
+    this.value=value;
+  }
 
   public T getKey() {
     return key;
