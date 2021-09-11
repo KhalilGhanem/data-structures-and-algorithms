@@ -1,47 +1,55 @@
 package HashTable;
 
+import java.util.Arrays;
+
 public class HashTable<T> {
   Node[] hashArray;
   int size;
+
   public HashTable(int size) {
     this.size = size;
-    hashArray = new Node[this.size];
+    this.hashArray=new Node[this.size];
+
     for (int i = 0; i < hashArray.length; i++) {
-      hashArray[i] = new Node<T>();
+      hashArray[i]=new Node();
     }
   }
-    int hash(int key){
-    return (key*7)%size;
+
+  public int hash(T key){
+    return (Math.abs(key.hashCode()*7)) % hashArray.length;
   }
-  public void add(int key,T value){
+
+  public void add(T key,T value){
     int index=hash(key);
     Node newNode=new Node(key,value);
-    Node arrayValue=hashArray[index];
 
-    newNode.next=arrayValue.next;
-    arrayValue.next=newNode;
-
+    if (hashArray[index].value==null){
+      hashArray[index]=newNode;
+    }else {
+      newNode.next=hashArray[index].next;
+      hashArray[index].next=newNode;
+    }
   }
-// throws Exception
-  public T get(int key) {
-    T value=null;
-    int index=hash(key);
-//    if(hashArray[index].value==null){
-//      throw new Exception("this index is empty");
-//    }else {
+
+  public T get(T key) {
+    T value = null;
+    int index = hash(key);
+    if (hashArray[index]==null){
+      return null;
+    }else {
       Node arrayValue = hashArray[index];
-      while (arrayValue != null) {
-        if (arrayValue.key == key) {
-          value = (T) arrayValue.value;
+      while (arrayValue!=null){
+        if (arrayValue.key==key){
+          value=(T)arrayValue.value;
           break;
         }
-        arrayValue = arrayValue.next;
+        arrayValue=arrayValue.next;
       }
-//    }
+    }
+
     return value;
   }
-
-  public boolean contains(int key){
+  public boolean contains(T key){
     boolean result=false;
     int index=hash(key);
     Node arrayValue=hashArray[index];
@@ -55,4 +63,17 @@ public class HashTable<T> {
     return result;
   }
 
+  public void  printValue(T key){
+    int index=hash(key);
+    System.out.println(hashArray[index].value);
+  }
+
+  @Override
+  public String toString() {
+    return "HashTable{" +
+      "hashArray=" + Arrays.toString(hashArray) +
+      '}';
+  }
+
+  //return (Math.abs(key.hashCode()*599)) % hashArray.length;
 }
