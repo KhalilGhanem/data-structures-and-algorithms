@@ -37,3 +37,16 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 * get nodes: Returns all of the nodes in the graph as a collection
 * get neighbors: Returns a collection of edges connected to the given node
 * size: Returns the total number of nodes in the graph
+
+# Breadth-First Traversal
+
+ Write a function called breadth-first that traverse a graph using BFT Way.
+
+## Whiteboard Process
+
+![breadth-first](CC36.png)
+
+## Approach AND Efficiency
+
+* Time Big O **O(N^2)**
+* Space Big O **O(N)**

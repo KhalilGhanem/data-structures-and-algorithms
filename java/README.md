@@ -29,3 +29,4 @@
 |Repeated-Word|[CC31](HashTable/README.md)|
 |Tree-Intersection|[CC32](HashTable/README.md)|
 |Graphs|[CC35](Graph/README.md)|
+|Graph BFT|[CC36](Graph/README.md)|

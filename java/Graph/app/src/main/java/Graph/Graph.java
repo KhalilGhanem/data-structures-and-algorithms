@@ -63,6 +63,32 @@ public class Graph<T> {
   public int size(){
     return graphList.size();
   }
+  public List<Node<T>> breadthFirst(Node base){
+    List<Node<T>> nodeList = new ArrayList<>();
+    Queue<Node<T>> breadth  = new LinkedList<>();
+    Set<Node<T>> visited =new HashSet<>();
+
+    breadth.add(base);
+    visited.add(base);
+
+    while (!breadth.isEmpty()){
+      Node front =breadth.remove();
+      nodeList.add(front);
+      for (Node<T> neighbor : getNeighbors(front)) {
+        if (!visited.contains(neighbor)){
+          visited.add(neighbor);
+          breadth.add(neighbor);
+        }
+      }
+    }
+    String nodeResult="";
+    for (Node<T> tNode : nodeList) {
+      nodeResult+=tNode.value+", ";
+    }
+    System.out.println(nodeResult);
+
+    return nodeList;
+  }
 
 
 }

@@ -97,5 +97,39 @@ class AppTest {
     Graph<String>test=new Graph<String>();
     assertNull(test.getNodes());
   }
+  @Test void testBFT(){
+    Graph<String>test=new Graph<String>();
+    Node<String> node1=test.addNode("Pandora");
+    Node<String> node2=test.addNode("Arendelle");
+    Node<String> node3=test.addNode("Metroville");
+    Node<String> node4=test.addNode("Monstroplolis");
+    Node<String> node5=test.addNode("Narnia");
+    Node<String> node6=test.addNode("Naboo");
+
+    test.addEdge(node1,node2,true);
+
+    test.addEdge(node2,node3,true);
+    test.addEdge(node2,node4,true);
+
+    test.addEdge(node3,node5,true);
+    test.addEdge(node3,node6,true);
+    test.addEdge(node3,node4,true);
+
+    test.addEdge(node4,node6,true);
+
+    test.addEdge(node5,node6,true);
+
+    List<Node> nodeList = new ArrayList<>();
+
+    nodeList.add(node1);
+    nodeList.add(node2);
+    nodeList.add(node3);
+    nodeList.add(node4);
+    nodeList.add(node5);
+    nodeList.add(node6);
+
+    assertEquals(nodeList,test.breadthFirst(node1));
+
+  }
 
 }
